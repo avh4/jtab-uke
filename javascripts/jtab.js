@@ -481,11 +481,11 @@ Raphael.fn.margin_right = 10;
 
 Raphael.fn.current_offset = Raphael.fn.margin_left;
 
-Raphael.fn.string_spacing = 16;
+Raphael.fn.string_spacing = 14;
 Raphael.fn.strings_drawn = 4;
 Raphael.fn.fret_spacing = 16;
 Raphael.fn.frets_drawn = 4;
-Raphael.fn.note_radius = 7;
+Raphael.fn.note_radius = 4;
 
 Raphael.fn.fret_width = Raphael.fn.string_spacing * ( Raphael.fn.strings_drawn - 1 ); 
 Raphael.fn.fret_height = Raphael.fn.fret_spacing * (Raphael.fn.frets_drawn + 0.5); 
@@ -674,7 +674,7 @@ Raphael.fn.chord_note = function (position, string_number, note) {
       this.margin_top + fret_dy, this.note_radius).attr({stroke: this.color, fill: this.color});
     if ( ! (note[1] === undefined) ) {
       this.text( fret_left + (string_number - 1) * this.string_spacing, 
-      this.margin_top + fret_dy, note[1] ).attr({stroke: this.fingering_text_color, "font-size":"12px"});
+      this.margin_top + fret_dy, note[1] ).attr({stroke: this.fingering_text_color, "font-size":"8px"});
     }
   }
   
