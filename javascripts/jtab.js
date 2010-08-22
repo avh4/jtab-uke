@@ -482,7 +482,7 @@ Raphael.fn.margin_right = 10;
 Raphael.fn.current_offset = Raphael.fn.margin_left;
 
 Raphael.fn.string_spacing = 16;
-Raphael.fn.strings_drawn = 6;
+Raphael.fn.strings_drawn = 4;
 Raphael.fn.fret_spacing = 16;
 Raphael.fn.frets_drawn = 4;
 Raphael.fn.note_radius = 7;
@@ -541,7 +541,7 @@ Raphael.fn.chord_fretboard = function ( position, chord_name ) {
   var fret_labels = [ '', '', '', 'III', '', 'V', '', 'VII', '', 'IX', '', '', 'XII', '', '', 'XV', '', 'XVII', '', 'XIX', '', 'XXI', '' ];
   
   this.text( // chord name
-    fret_left + 2.5 * this.string_spacing,
+    fret_left + 1.5 * this.string_spacing,
     this.margin_top - 20, 
     chord_name).attr({stroke: this.tab_text_color, "font-size":"20px"});
   
@@ -803,7 +803,7 @@ Raphael.fn.render_token = function (token) {
   if ( c.isValid ) { // draw chord
     var chord = c.chordArray;
     this.chord_fretboard(chord[0], c.fullChordName );
-    for (var i = 1; i < chord.length ; i++) {  
+    for (var i = 1; i < chord.length && i <= this.strings_drawn; i++) {
       this.chord_note(chord[0], i, chord[i]);
     }
     this.increment_offset();
