@@ -542,7 +542,7 @@ Raphael.fn.chord_fretboard = function ( position, chord_name ) {
   
   this.text( // chord name
     fret_left + 1.5 * this.string_spacing,
-    this.margin_top - 20, 
+    this.margin_top - 25,
     chord_name).attr({stroke: this.tab_text_color, "font-size":"20px"});
   
   if ( position == 0 ) { // nut
