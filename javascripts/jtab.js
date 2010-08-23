@@ -538,7 +538,7 @@ Raphael.fn.increment_offset = function (width) {
 // draw the fretboard
 Raphael.fn.chord_fretboard = function ( position, chord_name ) {
   var fret_left = this.current_offset + this.margin_left;
-  var fret_labels = [ '', '', '', 'III', '', 'V', '', 'VII', '', 'IX', '', '', 'XII', '', '', 'XV', '', 'XVII', '', 'XIX', '', 'XXI', '' ];
+  var fret_labels = [ '', '', '', '', '', '5', '', '7', '', '9', '', '', '12', '', '', '', '', '', '', '', '', '', '' ];
   
   this.text( // chord name
     fret_left + 1.5 * this.string_spacing,
